@@ -1,0 +1,11 @@
+[Desktop Entry]
+Type=Application
+Categories=Utility;Electronics;
+Encoding=UTF-8
+Comment=Serial Port Terminal for the ESP8266
+TryExec=espterm
+Exec=espterm
+GenericName=Serial Port Terminal
+Icon=espterm
+Name=ESPTerm
+

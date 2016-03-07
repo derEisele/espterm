@@ -1,0 +1,5 @@
+*~
+espterm
+util/sampleproject/obj
+util/sampleproject/build
+src/gresources.c
