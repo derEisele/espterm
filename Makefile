@@ -19,6 +19,7 @@ PKGS_OPT	:= $(addprefix --pkg ,$(PACKAGES))
 # Install / Uninstall settings
 INSTDIR			:= $(DESTDIR)/usr/bin
 DESKTOP_FILE	:= espterm.desktop
+DESKTOP_DIR   := $(DESTDIR)/usr/share/applications/
 ICON_FILE		:= espterm.png
 ICON_DIR		:= $(DESTDIR)/usr/share/pixmaps
 
@@ -34,7 +35,7 @@ $(GRESOURCES_C): $(GRESOURCES_XML) $(GRESOURCES_FILES)
 install: $(TARGET)
 	install --mode=755 $(TARGET) $(INSTDIR)/
 	install --mode=755 $(ICON_FILE) $(ICON_DIR)/
-	desktop-file-install $(DESKTOP_FILE)
+	install --mode=644 $(DESKTOP_FILE) $(DESKTOP_DIR)/
 
 uninstall:
 	$(RM) $(INSTDIR)/$(TARGET)
